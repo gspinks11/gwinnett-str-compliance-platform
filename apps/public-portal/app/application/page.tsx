@@ -1,5 +1,6 @@
 'use client';
 
+import { Suspense } from 'react';
 import ApplicationWizard from '../../components/ApplicationWizard';
 
 export default function ApplicationPage() {
@@ -25,7 +26,9 @@ export default function ApplicationPage() {
 
       {/* Wizard */}
       <div className="max-w-4xl mx-auto px-6 py-12">
-        <ApplicationWizard />
+        <Suspense fallback={<div className="text-sm text-gray-500">Loading application form...</div>}>
+          <ApplicationWizard />
+        </Suspense>
       </div>
     </main>
   );
