@@ -17,3 +17,6 @@ coverage/
 .env
 .env.production.local
 pnpm-lock.yaml
+apps/**/.data/
+apps/**/.wrangler/
+**/tsconfig.tsbuildinfo
