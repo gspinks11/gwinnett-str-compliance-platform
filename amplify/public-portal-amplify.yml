@@ -1,0 +1,20 @@
+version: 1
+applications:
+  - appRoot: apps/public-portal
+    frontend:
+      buildPath: /
+      phases:
+        preBuild:
+          commands:
+            - npm ci
+        build:
+          commands:
+            - npm run build --workspace=public-portal
+      artifacts:
+        baseDirectory: apps/public-portal/.next
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+          - apps/public-portal/.next/cache/**/*

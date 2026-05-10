@@ -1,0 +1,20 @@
+version: 1
+applications:
+  - appRoot: apps/admin-console
+    frontend:
+      buildPath: /
+      phases:
+        preBuild:
+          commands:
+            - npm ci
+        build:
+          commands:
+            - npm run build --workspace=admin-console
+      artifacts:
+        baseDirectory: apps/admin-console/.next
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+          - apps/admin-console/.next/cache/**/*

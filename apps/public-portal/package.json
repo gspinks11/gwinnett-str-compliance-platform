@@ -1,0 +1,41 @@
+{
+  "name": "public-portal",
+  "version": "0.1.0",
+  "description": "Public portal for STR owners",
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.3.2",
+    "@repo/auth": "file:../../packages/auth",
+    "@repo/shared-types": "file:../../packages/shared-types",
+    "@repo/ui": "file:../../packages/ui",
+    "@stripe/react-stripe-js": "^2.4.0",
+    "@stripe/stripe-js": "^2.1.11",
+    "@tanstack/react-query": "^5.25.0",
+    "date-fns": "^2.30.0",
+    "lucide-react": "^1.14.0",
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.48.0",
+    "stripe": "^14.25.0",
+    "zod": "^3.22.4",
+    "zustand": "^4.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.31",
+    "@types/react-dom": "^18.2.14",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.55.0",
+    "eslint-config-next": "^14.0.0",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.3.2"
+  }
+}

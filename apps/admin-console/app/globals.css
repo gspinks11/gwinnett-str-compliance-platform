@@ -1,0 +1,75 @@
+@config "../tailwind.config.ts";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --admin-background: #f3f5f9;
+  --admin-foreground: #162035;
+  --admin-line: rgba(27, 34, 48, 0.1);
+  --admin-brand: #7d1d2a;
+  --admin-brand-strong: #621520;
+  --admin-accent: #1d4a78;
+  --admin-soft: #eef3fa;
+  --admin-ink-soft: #566983;
+  --admin-glow: rgba(27, 44, 73, 0.18);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--admin-foreground);
+  font-family: var(--font-body), sans-serif;
+  background:
+    radial-gradient(circle at 8% 0%, #e4ecf8 0%, rgba(228, 236, 248, 0) 34%),
+    radial-gradient(circle at 94% 4%, #f6e6e9 0%, rgba(246, 230, 233, 0) 26%),
+    linear-gradient(180deg, #f7f9fc 0%, #f2f5fa 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--admin-accent);
+  outline-offset: 2px;
+}
+
+@layer components {
+  .admin-skip-link {
+    position: absolute;
+    left: 0.75rem;
+    top: -2.5rem;
+    z-index: 60;
+    border-radius: 0.5rem;
+    background: #ffffff;
+    border: 1px solid var(--admin-line);
+    color: var(--admin-foreground);
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    box-shadow: 0 10px 30px -22px rgba(27, 44, 73, 0.7);
+    transition: top 150ms ease;
+  }
+
+  .admin-skip-link:focus {
+    top: 0.75rem;
+  }
+
+  .admin-panel {
+    border: 1px solid var(--admin-line);
+    border-radius: 1.2rem;
+    background: #ffffff;
+    box-shadow: 0 22px 48px -34px var(--admin-glow);
+  }
+
+  .admin-kicker {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #8e3040;
+  }
+}

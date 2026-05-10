@@ -1,0 +1,19 @@
+{
+  "name": "@repo/mock-data",
+  "version": "0.1.0",
+  "description": "Mock data generators and seeders",
+  "main": "src/index.ts",
+  "scripts": {
+    "generate": "node --loader tsx --no-warnings=ExperimentalWarning src/generate.ts",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.3.0",
+    "@repo/db": "file:../db"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.2"
+  }
+}
