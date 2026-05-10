@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
+export const dynamic = 'force-dynamic';
 import Link from 'next/link';
 import maplibregl from 'maplibre-gl';
 

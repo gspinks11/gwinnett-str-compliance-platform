@@ -3,6 +3,7 @@ import { db, connectDb, schema } from '@repo/db';
 import { eq, desc } from 'drizzle-orm';
 
 export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
 
 export async function GET(_req: NextRequest) {
   try {

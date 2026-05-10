@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { headers } from 'next/headers';
 
+export const dynamic = 'force-dynamic';
+
 interface Stats {
   applications: { total: number; submitted: number; under_review: number; approved: number; denied: number };
   licenses: { active: number; expired: number; suspended: number };

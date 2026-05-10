@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
+export const dynamic = 'force-dynamic';
+
 type LicenseStatus = 'active' | 'expired' | 'suspended' | 'revoked';
 
 interface LicenseRow {

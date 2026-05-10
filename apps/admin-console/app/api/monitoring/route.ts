@@ -3,6 +3,7 @@ import { and, eq } from 'drizzle-orm';
 import { connectDb, db, schema } from '@repo/db';
 
 export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
 
 type ComplianceStatus = 'licensed' | 'matched_unlicensed' | 'unmatched';
 
